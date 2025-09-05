@@ -17,7 +17,6 @@ export default function App() {
   const [refreshFlag, setRefreshFlag] = useState(0);
 
   const handleLogin = () => {
-    // Dummy login function - always succeeds for now
     setIsLoggedIn(true);
   };
 
@@ -51,7 +50,7 @@ export default function App() {
           path="/signup" 
           element={
             isLoggedIn ? 
-            <Navigate to="/home" replace /> : 
+            <Navigate to="/login" replace /> : 
             <Signup onLogin={handleLogin} />
           } 
         />
@@ -107,5 +106,7 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+
 
 

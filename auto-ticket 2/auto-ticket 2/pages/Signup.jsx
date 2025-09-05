@@ -57,6 +57,7 @@ const Signup = ({ onLogin }) => {
       }
 
       const data = await response.json(); // parses the JSON response from the server 
+      alert('Signup successful! Please log in.');
       console.log('User has signed up:', data);
 
       // calls method to reroute user after signup
